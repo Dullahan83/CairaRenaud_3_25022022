@@ -1,0 +1,15 @@
+.btn{
+    &--center{
+        display: flex;
+        margin: 0 auto;
+    }
+    @include gradient(to right bottom, $secondary-color,$primary-color);
+    font-size: 20px;
+    padding: 1em 2em;
+    border-radius: 50px;
+    border: none;
+    color: #FFF;
+    &:hover{
+       filter: brightness(1.1)
+    }
+}   

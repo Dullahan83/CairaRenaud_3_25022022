@@ -1,0 +1,24 @@
+@mixin background-clr($color){
+    background: $color;
+}
+
+@mixin gradient($direction,$color-start,$color-stop){
+    background: linear-gradient($direction,$color-start, $color-stop);
+}
+
+@mixin width ($width){
+    width: $width;
+}
+
+@mixin opacity($opacity){
+    opacity: $opacity;
+}
+
+@mixin font-fam($family){
+    font-family: $family, sans-serif;
+}
+
+@mixin display($display,$direction){
+    display: $display;
+    flex-direction: $direction;
+}

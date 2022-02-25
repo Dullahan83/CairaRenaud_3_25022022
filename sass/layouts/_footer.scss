@@ -9,6 +9,8 @@ footer{
         padding-top: 3rem;
         margin: 0;
         h3{
+            @include font-fam(shrikhand);
+            font-weight: 500;
             padding-bottom: 1rem;
         }
         li{

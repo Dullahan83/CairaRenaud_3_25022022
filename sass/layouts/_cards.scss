@@ -1,0 +1,13 @@
+
+.fig{
+    margin: 0;
+    @include display(flex, column);
+    width: 100%;
+    justify-content: center;
+    border: 1px solid red;
+}
+img{
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
