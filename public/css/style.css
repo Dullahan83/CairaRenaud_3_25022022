@@ -92,12 +92,15 @@ a {
   background: #f6f6f6ff;
   border: 1px solid red;
 }
+#diners h2 {
+  padding-left: 1.5rem;
+}
 #diners a {
   background: #fff;
   display: flex;
-  justify-content: center;
-  width: 95%;
-  border: 1px solid red;
+  border-radius: 25px;
+  margin: 20px auto;
+  width: 90%;
 }
 
 .btn {
@@ -118,17 +121,45 @@ a {
 
 .fig {
   margin: 0;
+  height: 330px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
-  border: 1px solid red;
+  border-radius: 25px;
 }
-
-img {
+.fig img {
   height: 230px;
   width: 100%;
   object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.fig--caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.fig--caption h3 {
+  margin: 0;
+}
+.fig--caption p {
+  padding-top: 0.2rem;
+  margin: 0;
+}
+.fig--caption__heart {
+  display: flex;
+  font-size: 28px;
+  font-weight: 100;
+}
+.fig--new {
+  display: flex;
+  color: #088b6bff;
+  background: #99E2D0;
+  padding: 0.5em 1em;
+  position: absolute;
+  right: 2.5rem;
+  border-radius: 3px;
 }
 
 footer {

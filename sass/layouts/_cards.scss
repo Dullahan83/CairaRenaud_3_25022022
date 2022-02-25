@@ -1,13 +1,45 @@
 
 .fig{
     margin: 0;
+    height: 330px;
     @include display(flex, column);
     width: 100%;
-    justify-content: center;
-    border: 1px solid red;
-}
-img{
-    height: 230px;
-    width: 100%;
-    object-fit: cover;
+    border-radius: 25px;
+    img{
+        height: 230px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px 25px 0 0;
+    }
+    &--caption{
+        @include display(flex, row);
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        h3{
+            margin: 0;
+        }
+        p{
+            padding-top: 0.2rem;
+            margin: 0;
+        }
+
+        &__heart{
+            display: flex;
+            font-size: 28px;
+            font-weight: 100;
+        }
+    }
+
+
+
+    &--new{
+        display: flex;
+        color: #088b6bff;
+        @include background-clr($tertiary-color);
+        padding: 0.5em 1em;
+        position: absolute;
+        right: 2.5rem;
+        border-radius: 3px;
+    }
 }

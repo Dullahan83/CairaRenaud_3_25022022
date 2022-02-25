@@ -51,12 +51,15 @@
 #diners{
     @include background-clr(#f6f6f6ff);
     border: 1px solid red;
+    h2{
+        padding-left: 1.5rem;
+    }
     a{
         @include background-clr(#fff);
         display: flex;
-        justify-content: center;
-        width: 95%;
-        border: 1px solid red;
+        border-radius: 25px;
+        margin: 20px auto;
+        width: 90%;
     }
 }
 
