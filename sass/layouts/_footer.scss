@@ -1,0 +1,23 @@
+footer{
+    height: 260px;
+    background-color: #353535ff;
+    color: #fff;
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-top: 3rem;
+        margin: 0;
+        h3{
+            padding-bottom: 1rem;
+        }
+        li{
+            color: #fff;
+            padding: 5px 0;
+            i{
+                width: 14px;
+                padding-right: 30px
+            }
+        }
+    }
+}

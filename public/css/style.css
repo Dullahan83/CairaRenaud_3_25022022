@@ -10,6 +10,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: shrikhand, sans sans-serif;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -31,12 +32,36 @@ a {
   width: 44%;
 }
 .nav--link {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   left: 20px;
 }
 .nav--link__i {
   font-size: 25px;
+}
+
+footer {
+  height: 260px;
+  background-color: #353535ff;
+  color: #fff;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-top: 3rem;
+  margin: 0;
+}
+footer ul h3 {
+  padding-bottom: 1rem;
+}
+footer ul li {
+  color: #fff;
+  padding: 5px 0;
+}
+footer ul li i {
+  width: 14px;
+  padding-right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
