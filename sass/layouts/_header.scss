@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    
+    &--image{
+        display: flex;
+        height: 33px;
+        width: 44%;
+    }
+    
+    &--link{
+        visibility:visible;
+        position: absolute;
+        left: 20px;
+        &__i{
+            font-size: 25px;
+        }
+    } 
+}
