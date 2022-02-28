@@ -22,3 +22,11 @@
     display: $display;
     flex-direction: $direction;
 }
+
+@mixin shrik{
+    font-family: shrikhand;
+}
+
+@mixin bold{
+    font-weight: bold;
+}
