@@ -20,22 +20,30 @@ a {
 .nav {
   display: flex;
   flex-direction: row;
-  padding: 1rem 0;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
 }
 .nav--image {
-  display: flex;
-  height: 33px;
-  width: 44%;
+  height: 42px;
+  width: 48%;
 }
 .nav--link {
-  visibility: hidden;
   position: absolute;
   left: 20px;
 }
 .nav--link__i {
   font-size: 25px;
+}
+.nav--link__visible {
+  visibility: visible;
+}
+.nav--link__hidden {
+  visibility: hidden;
+}
+
+body {
+  max-width: 768px;
 }
 
 .background {
@@ -54,7 +62,6 @@ a {
 .form--searchline {
   border-color: transparent;
   background: #eaeaeaff;
-  width: 45%;
   padding-left: 1rem;
   font-size: 20px;
   font-weight: 600;
@@ -86,14 +93,15 @@ a {
 .explore--description__thin {
   font-size: 20px;
   margin: 0 auto;
+  opacity: 0.8;
 }
 
 #diners {
   background: #f6f6f6ff;
-  border: 1px solid red;
+  padding: 3rem 0;
 }
 #diners h2 {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
 #diners a {
   background: #fff;
@@ -103,7 +111,38 @@ a {
   width: 90%;
 }
 
-.btn {
+#explanation h2 {
+  font-size: 24px;
+  padding-left: 2rem;
+}
+#explanation ol {
+  counter-reset: li;
+  list-style: none;
+}
+
+#menu {
+  background-color: #f6f6f6ff;
+  border-radius: 50px 50px 0 0;
+}
+#menu .diners-name {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-round {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   font-size: 20px;
   padding: 1em 2em;
@@ -111,12 +150,55 @@ a {
   border: none;
   color: #FFF;
 }
-.btn--center {
+.btn-round--center {
   display: flex;
   margin: 0 auto;
 }
-.btn:hover {
+.btn-round:hover {
   filter: brightness(1.1);
+}
+
+.explanation-btn {
+  display: flex;
+  padding: 1.5em;
+  width: 95%;
+  font-size: 18px;
+  font-weight: 600;
+  background: #f6f6f6ff;
+  border: transparent;
+  border-radius: 20px;
+  margin: 1em 0;
+}
+.explanation-btn--icon {
+  padding: 0 1.5rem 0 1.5rem;
+  font-size: 20px;
+  color: #7e7e7eff;
+}
+.explanation-btn:hover {
+  background-color: #f5edffff;
+}
+.explanation-btn:hover i {
+  color: #9356DC;
+}
+
+.menu-btn {
+  border: 1px solid red;
+  padding: 1.5em;
+  width: 95%;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.menu-btn--description {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.menu-btn h2 {
+  border: 1px solid red;
+  margin: 0;
 }
 
 .fig {
@@ -126,6 +208,7 @@ a {
   flex-direction: column;
   width: 100%;
   border-radius: 25px;
+  position: relative;
 }
 .fig img {
   height: 230px;
@@ -158,7 +241,7 @@ a {
   background: #99E2D0;
   padding: 0.5em 1em;
   position: absolute;
-  right: 2.5rem;
+  right: 1rem;
   border-radius: 3px;
 }
 

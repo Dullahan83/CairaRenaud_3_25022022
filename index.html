@@ -20,7 +20,7 @@
         <div id="main-wrap">
             <header>
                 <nav class="nav">
-                    <a href="/index.html" class="nav--link"><i class="fa-solid fa-arrow-left nav--link__i"></i></a>
+                    <a href="/index.html" class="nav--link__hidden"><i class="fa-solid fa-arrow-left nav--link__hidden"></i></a>
                     <img src="/images/logo/ohmyfood.png" alt="oh my food logo" class="nav--image">
                 </nav>
             </header>
@@ -37,22 +37,24 @@
                         <p class="explore--description__bold">Réservez le menu qui vous convient</p>
                         <p class="explore--description__thin">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                     </div>
-                    <button class="btn btn--center">Explorez nos restaurants</button>
+                    <button class="btn-round btn-round--center">Explorez nos restaurants</button>
                 </article>
 
                 <section id="explanation">
                     <h2>Fonctionnement</h2>
                     <ol>
-                        <li><button><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button></li>
-                        <li><button><i class="fa-solid fa-list-ul"></i>Composez votre menu</button></li>
-                        <li><button><i class="fa-solid fa-store"></i>Dégustez au restaurant</button></li>
+                        <li><button class="explanation-btn"><i class="fa-solid fa-mobile-screen-button explanation-btn--icon"></i>Choisissez un restaurant</button></li>
+                        <li><button class="explanation-btn"><i class="fa-solid fa-list-ul explanation-btn--icon"></i>Composez votre menu</button></li>
+                        <li><button class="explanation-btn"><i class="fa-solid fa-store explanation-btn--icon"></i>Dégustez au restaurant</button></li>
                     </ol>
                 </section>
+
                 <section id="diners">
                     <h2>Restaurants</h2>
                     <a href="/html/La palette du goût.html">
                         <figure class="fig">
                             <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du goût">
+                            <p class="fig--new">Nouveau</p>
                             <figcaption class="fig--caption">
                                 <div class="fig--caption__txt">
                                     <h3>La palette du goût</h3>
@@ -61,12 +63,13 @@
                                 <i class="fa-solid fa-heart fig--caption__heart"></i>
                             </figcaption>
                         </figure>
-                        <p class="fig--new">Nouveau</p>
+                        
                     </a>
 
                     <a href="/html/La note enchantée.html">
                         <figure class="fig">
                             <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée">
+                            <p class="fig--new">Nouveau</p>
                             <figcaption class="fig--caption">
                                 <div class="fig--caption__txt">
                                     <h3>La note enchantée</h3>
@@ -74,7 +77,6 @@
                                 </div>
                                 <i class="fa-solid fa-heart fig--caption__heart"></i>
                             </figcaption>
-                            <p class="fig--new">Nouveau</p>
                         </figure>
                     </a>
 

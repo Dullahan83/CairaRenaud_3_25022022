@@ -1,3 +1,6 @@
+body{
+    max-width: 768px
+}
 .background{
     @include background-clr(#eaeaeaff);
     
@@ -13,7 +16,6 @@
     &--searchline{
         border-color: transparent;
         background: #eaeaeaff;
-        width: 45%;
         padding-left: 1rem;
         font-size: 20px;
         font-weight: 600;
@@ -44,15 +46,16 @@
         &__thin{
             font-size: 20px;
             margin: 0 auto;
+            opacity: 0.8;
         }
     }
 }
 
 #diners{
     @include background-clr(#f6f6f6ff);
-    border: 1px solid red;
+    padding: 3rem 0;;
     h2{
-        padding-left: 1.5rem;
+        padding-left: 2rem;
     }
     a{
         @include background-clr(#fff);
@@ -60,6 +63,17 @@
         border-radius: 25px;
         margin: 20px auto;
         width: 90%;
+    }
+}
+
+#explanation{
+    h2{
+        font-size: 24px;
+        padding-left: 2rem;
+    }
+    ol{
+        counter-reset: li;
+        list-style: none;
     }
 }
 
