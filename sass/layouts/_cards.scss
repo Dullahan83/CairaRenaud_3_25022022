@@ -1,7 +1,7 @@
 
 .fig{
     margin: 0;
-    height: 330px;
+    height: 310px;
     @include display(flex, column);
     width: 100%;
     border-radius: 25px;
@@ -21,7 +21,7 @@
             margin: 0;
         }
         p{
-            padding-top: 0.2rem;
+            padding-top: 0.4rem;
             margin: 0;
         }
 

@@ -23,6 +23,7 @@ a {
   padding: 1rem;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .nav--image {
   height: 38px;
@@ -42,7 +43,7 @@ a {
   visibility: hidden;
 }
 
-body {
+#main-wrap {
   max-width: 768px;
 }
 
@@ -127,10 +128,17 @@ h1 {
   list-style: none;
 }
 
+#main-wrap {
+  max-width: 768px;
+}
+
 .menu {
   background-color: #e6e6e6ff;
   border-radius: 50px 50px 0 0;
   padding: 2rem 0;
+  margin-top: -3rem;
+  position: absolute;
+  width: 100%;
 }
 .menu--title {
   font-family: shrikhand;
@@ -144,7 +152,13 @@ h1 {
 .menu--title__heart {
   display: flex;
   font-size: 28px;
-  font-weight: 100;
+  stroke: #000;
+  stroke-width: 30;
+  color: transparent;
+  background: linear-gradient(to right, #e6e6e6ff 0%, #e6e6e6ff 100%);
+}
+.menu--title__heart:hover {
+  color: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 
 .caps {
@@ -219,6 +233,7 @@ article {
   width: 95%;
   border-radius: 20px;
   margin: 0.5rem auto;
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   border: none;
@@ -240,7 +255,7 @@ article {
 
 .fig {
   margin: 0;
-  height: 330px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -264,7 +279,7 @@ article {
   margin: 0;
 }
 .fig--caption p {
-  padding-top: 0.2rem;
+  padding-top: 0.4rem;
   margin: 0;
 }
 .fig--caption__heart {
@@ -287,25 +302,26 @@ footer {
   background-color: #353535ff;
   color: #fff;
 }
-footer ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-top: 3rem;
+footer h3 {
+  font-family: shrikhand;
+  padding: 2rem 0 0 2.5rem;
+  font-weight: 500;
+  font-size: 22px;
   margin: 0;
 }
-footer ul h3 {
-  font-family: shrikhand, sans-serif;
-  font-weight: 500;
-  padding-bottom: 1rem;
+
+.footer-list {
+  list-style: none;
 }
-footer ul li {
+.footer-list li {
+  padding-bottom: 0.2rem;
+}
+.footer-list--a {
   color: #fff;
-  padding: 5px 0;
 }
-footer ul li i {
+.footer-list--a__i {
   width: 14px;
-  padding-right: 30px;
+  padding-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

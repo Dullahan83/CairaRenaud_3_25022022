@@ -10,14 +10,6 @@
     width: $width;
 }
 
-@mixin opacity($opacity){
-    opacity: $opacity;
-}
-
-@mixin font-fam($family){
-    font-family: $family, sans-serif;
-}
-
 @mixin display($display,$direction){
     display: $display;
     flex-direction: $direction;

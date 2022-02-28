@@ -1,8 +1,13 @@
-
+#main-wrap{
+    max-width: 768px;
+}
 .menu{
     background-color: #e6e6e6ff;
     border-radius: 50px 50px 0 0;
     padding: 2rem 0;
+    margin-top: -3rem;
+    position: absolute;
+    width: 100%;
     &--title{
         @include shrik;
         padding: 0 1.5rem;
@@ -14,7 +19,13 @@
         &__heart{
             display: flex;
             font-size: 28px;
-            font-weight: 100;
+            stroke: #000;
+            stroke-width: 30;
+            color: transparent;
+            background: linear-gradient(to right, #e6e6e6ff 0%, #e6e6e6ff 100%);
+            &:hover{
+                color: linear-gradient(to bottom, $secondary-color, $primary-color)
+            }
         }
     }
 }
