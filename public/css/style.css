@@ -129,17 +129,25 @@ h1 {
   list-style: none;
 }
 
-#main-wrap {
-  max-width: 768px;
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   background-color: #e6e6e6ff;
   border-radius: 50px 50px 0 0;
   padding: 2rem 0;
-  margin-top: -3rem;
-  position: absolute;
   width: 100%;
+  margin-top: -3rem;
 }
 .menu--title {
   font-family: shrikhand;
@@ -153,13 +161,7 @@ h1 {
 .menu--title__heart {
   display: flex;
   font-size: 28px;
-  stroke: #000;
-  stroke-width: 30;
-  color: transparent;
-  background: linear-gradient(to right, #e6e6e6ff 0%, #e6e6e6ff 100%);
-}
-.menu--title__heart:hover {
-  color: linear-gradient(to bottom, #FF79DA, #9356DC);
+  font-weight: 100;
 }
 
 .caps {
@@ -173,12 +175,6 @@ h1 {
   width: 3rem;
   border-top: 4px solid #99E2D0;
   margin: 0 0 1rem 1rem;
-}
-
-img {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
 }
 
 article {
@@ -211,7 +207,8 @@ article {
 .explanation-btn {
   box-shadow: 3px 3px 3px #ecececff;
   display: flex;
-  padding: 1.5em;
+  padding: 0.5rem 1.5rem;
+  align-items: center;
   width: 95%;
   font-size: 1.3rem;
   font-weight: 600;
@@ -222,6 +219,13 @@ article {
 }
 .explanation-btn:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
+}
+.explanation-btn--number {
+  background-color: #9356DC;
+  padding: 0.2rem 0.6rem;
+  border-radius: 25px;
+  margin-left: -38px;
+  color: #FFF;
 }
 .explanation-btn--icon {
   padding: 0 1.5rem 0 1.5rem;
