@@ -3,6 +3,7 @@
     margin: 0;
     height: 310px;
     @include display(flex, column);
+    @include shadow;
     width: 100%;
     border-radius: 25px;
     position: relative;

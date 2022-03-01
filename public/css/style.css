@@ -58,8 +58,9 @@ h1 {
 .form {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   opacity: 0.7;
+  box-shadow: inset 0px 8px 8px -3px #c6c6c6;
 }
 .form--label {
   font-size: 20px;
@@ -191,6 +192,7 @@ article {
 
 .btn-round {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  box-shadow: 3px 3px 3px #c7c7c7ff;
   font-size: 20px;
   padding: 1em 2em;
   border-radius: 50px;
@@ -203,9 +205,11 @@ article {
 }
 .btn-round:hover {
   filter: brightness(1.1);
+  box-shadow: 3px 3px 3px #979797;
 }
 
 .explanation-btn {
+  box-shadow: 3px 3px 3px #ecececff;
   display: flex;
   padding: 1.5em;
   width: 95%;
@@ -215,6 +219,9 @@ article {
   border: transparent;
   border-radius: 20px;
   margin: 1em 0;
+}
+.explanation-btn:hover {
+  box-shadow: 3px 3px 3px #c7c7c7ff;
 }
 .explanation-btn--icon {
   padding: 0 1.5rem 0 1.5rem;
@@ -237,6 +244,10 @@ article {
   display: flex;
   flex-direction: column;
   border: none;
+  box-shadow: 3px 3px 3px #ecececff;
+}
+.menu-btn:hover {
+  box-shadow: 3px 3px 3px #c7c7c7ff;
 }
 .menu-btn--description {
   display: flex;
@@ -250,7 +261,7 @@ article {
 .menu-btn p {
   margin-top: 0.5rem;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .fig {
@@ -258,9 +269,13 @@ article {
   height: 310px;
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 3px #ecececff;
   width: 100%;
   border-radius: 25px;
   position: relative;
+}
+.fig:hover {
+  box-shadow: 3px 3px 3px #c7c7c7ff;
 }
 .fig img {
   height: 230px;

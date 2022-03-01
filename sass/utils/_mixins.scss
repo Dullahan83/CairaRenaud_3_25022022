@@ -2,6 +2,13 @@
     background: $color;
 }
 
+@mixin shadow{
+    box-shadow: 3px 3px 3px #ecececff;
+    &:hover{
+        box-shadow: 3px 3px 3px #c7c7c7ff;
+    }
+}
+
 @mixin gradient($direction,$color-start,$color-stop){
     background: linear-gradient($direction,$color-start, $color-stop);
 }
