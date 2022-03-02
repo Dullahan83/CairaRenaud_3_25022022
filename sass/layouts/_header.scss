@@ -14,11 +14,9 @@
     &--link{
         position: absolute;
         left: 20px;
+        visibility: visible;
         &__i{
             font-size: 25px;
-        }
-        &__visible{
-            visibility: visible;
         }
         &__hidden{
             visibility: hidden;

@@ -32,12 +32,10 @@ a {
 .nav--link {
   position: absolute;
   left: 20px;
+  visibility: visible;
 }
 .nav--link__i {
   font-size: 25px;
-}
-.nav--link__visible {
-  visibility: visible;
 }
 .nav--link__hidden {
   visibility: hidden;
@@ -64,6 +62,7 @@ h1 {
 }
 .form--label {
   font-size: 20px;
+  padding-left: 6rem;
 }
 .form--searchline {
   border-color: transparent;
@@ -151,7 +150,7 @@ img {
 }
 .menu--title {
   font-family: shrikhand;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
   font-size: 22px;
   display: flex;
   flex-direction: row;
@@ -160,8 +159,13 @@ img {
 }
 .menu--title__heart {
   display: flex;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 100;
+  color: #000000;
+}
+.menu--title__heart:hover {
+  animation: heart 2000ms ease forwards;
+  cursor: pointer;
 }
 
 .caps {
@@ -202,6 +206,7 @@ article {
 .btn-round:hover {
   filter: brightness(1.1);
   box-shadow: 3px 3px 3px #979797;
+  cursor: pointer;
 }
 
 .explanation-btn {
@@ -219,6 +224,7 @@ article {
 }
 .explanation-btn:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
+  cursor: pointer;
 }
 .explanation-btn--number {
   background-color: #9356DC;
@@ -252,6 +258,7 @@ article {
 }
 .menu-btn:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
+  cursor: pointer;
 }
 .menu-btn--description {
   display: flex;
@@ -259,8 +266,16 @@ article {
   width: 100%;
   justify-content: space-between;
 }
+.menu-btn--description__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .menu-btn h2 {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-btn p {
   margin-top: 0.5rem;
@@ -280,6 +295,7 @@ article {
 }
 .fig:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
+  cursor: pointer;
 }
 .fig img {
   height: 230px;
@@ -303,8 +319,12 @@ article {
 }
 .fig--caption__heart {
   display: flex;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 100;
+}
+.fig--caption__heart:hover {
+  animation: heart 2000ms ease forwards;
+  cursor: pointer;
 }
 .fig--new {
   display: flex;
@@ -316,6 +336,21 @@ article {
   border-radius: 3px;
 }
 
+@keyframes heart {
+  0% {
+    font-weight: 800;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    font-weight: 800;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 footer {
   height: 260px;
   background-color: #353535ff;

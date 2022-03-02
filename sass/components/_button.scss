@@ -13,6 +13,7 @@
     &:hover{
        filter: brightness(1.1);
        box-shadow: 3px 3px 3px #979797;
+       cursor: pointer;
     }
 }   
 
@@ -58,15 +59,18 @@
     flex-direction: column;
     border: none;
     @include shadow;
-    
     &--description{
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        &__text{
+            @include ellipsisOverflow;
+        }
     }
     h2{
         margin: 0;
+        @include ellipsisOverflow
     }
     p{
         margin-top: 0.5rem;

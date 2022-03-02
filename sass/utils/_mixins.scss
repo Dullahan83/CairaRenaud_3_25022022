@@ -6,6 +6,20 @@
     box-shadow: 3px 3px 3px #ecececff;
     &:hover{
         box-shadow: 3px 3px 3px #c7c7c7ff;
+        cursor: pointer;
+    }
+}
+
+@mixin ellipsisOverflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin gradientHeart{
+    &:hover{
+        animation: heart 2000ms ease forwards;
+        cursor: pointer;
     }
 }
 
