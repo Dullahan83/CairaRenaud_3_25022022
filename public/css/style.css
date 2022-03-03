@@ -356,6 +356,10 @@ img {
   position: absolute;
   right: 1rem;
   border-radius: 3px;
+  animation: alternate fadeInOut 1.5s infinite ease;
+}
+.fig--new__hidden {
+  display: none;
 }
 
 @keyframes heart {
@@ -385,16 +389,12 @@ img {
     transform: scale(1);
   }
 }
-@keyframes greenSlideOut {
-  100% {
-    width: 7rem;
-    height: 109px;
-    transform: scale(1);
-  }
+@keyframes fadeInOut {
   0% {
-    width: 0%;
-    height: 109px;
-    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes rotateCheck {
