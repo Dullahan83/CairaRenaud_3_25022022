@@ -2,19 +2,20 @@
   box-sizing: border-box;
 }
 
-#main-wrap {
-  max-width: 768px;
-}
-
 body {
   font-family: roboto, sans-serif;
   font-size: 16px;
   margin: 0;
+  animation: homeAppearance 3s 3s forwards;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+h1 {
+  margin: 0;
 }
 
 .nav {
@@ -51,7 +52,7 @@ a {
   align-items: center;
   background: #fff;
   opacity: 1;
-  animation: loader 3.5s forwards;
+  animation: loader 3s forwards;
 }
 .loading--scanner {
   border-radius: 50%;
@@ -75,14 +76,6 @@ a {
 
 .loading--scanner:nth-child(5) {
   animation-delay: 0.8s;
-}
-
-#main-wrap {
-  max-width: 768px;
-}
-
-h1 {
-  margin: 0;
 }
 
 .background {
@@ -142,6 +135,7 @@ h1 {
 }
 #diners h2 {
   padding-left: 2rem;
+  font-size: 30px;
 }
 #diners a {
   background: #fff;
@@ -155,7 +149,7 @@ h1 {
   padding: 3rem 0;
 }
 #explanation h2 {
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 0;
   padding-left: 2rem;
 }
@@ -371,10 +365,12 @@ img {
 }
 .fig--caption h3 {
   margin: 0;
+  font-size: 22px;
 }
 .fig--caption p {
-  padding-top: 0.4rem;
+  padding-top: 0.2rem;
   margin: 0;
+  font-size: 20px;
 }
 .fig--caption__heart {
   display: flex;
@@ -393,12 +389,13 @@ img {
   position: absolute;
   right: 1rem;
   border-radius: 3px;
-  animation: alternate fadeInOut 1s infinite ease;
+  animation: alternate fadeOut 1s infinite ease;
 }
 .fig--new__hidden {
   display: none;
 }
 
+/* Filling the hearts */
 @keyframes heart {
   0% {
     font-weight: 800;
@@ -414,6 +411,7 @@ img {
     -webkit-text-fill-color: transparent;
   }
 }
+/* Menu slide check */
 @keyframes greenSlideIn {
   0% {
     width: 0%;
@@ -426,6 +424,23 @@ img {
     transform: scale(1);
   }
 }
+@keyframes rotateCheck {
+  0% {
+    font-size: 0px;
+    transform: rotate(0deg);
+    margin: 0;
+  }
+  50% {
+    font-size: 2.5rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin: 0 2rem;
+    transform: rotate(360deg);
+    font-size: 2.5rem;
+  }
+}
+/* Loader animations */
 @keyframes loader {
   0% {
     visibility: visible;
@@ -445,28 +460,21 @@ img {
     transform: scale(0);
   }
 }
-@keyframes fadeInOut {
+@keyframes homeAppearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Cards New Fading anim */
+@keyframes fadeOut {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@keyframes rotateCheck {
-  0% {
-    font-size: 0px;
-    transform: rotate(0deg);
-    margin: 0;
-  }
-  50% {
-    font-size: 2.5rem;
-    transform: rotate(0deg);
-  }
-  100% {
-    margin: 0 2rem;
-    transform: rotate(360deg);
-    font-size: 2.5rem;
   }
 }
 footer {

@@ -19,10 +19,12 @@
         padding: 1rem;
         h3{
             margin: 0;
+            font-size: 22px;
         }
         p{
-            padding-top: 0.4rem;
+            padding-top: 0.2rem;
             margin: 0;
+            font-size: 20px;
         }
 
         &__heart{
@@ -40,7 +42,7 @@
         position: absolute;
         right: 1rem;
         border-radius: 3px;
-        animation: alternate fadeInOut 1s infinite ease;
+        animation: alternate fadeOut 1s infinite ease;
         &__hidden{
             display: none;
         }
