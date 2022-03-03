@@ -10,6 +10,16 @@
     }
 }
 
+@mixin scannerGradient1{
+    background-color: linear-gradient(45deg, $primary-color, $secondary-color);
+}
+@mixin scannerGradient2{
+    background-color: linear-gradient(45deg, $secondary-color, $tertiary-color);
+}
+@mixin scannerGradient3{
+    background-color: linear-gradient(45deg, $tertiary-color, $primary-color);
+}
+
 @mixin ellipsisOverflow{
     overflow: hidden;
     text-overflow: ellipsis;

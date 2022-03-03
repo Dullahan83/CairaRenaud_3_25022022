@@ -41,6 +41,42 @@ a {
   visibility: hidden;
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  opacity: 1;
+  animation: loader 3.5s forwards;
+}
+.loading--scanner {
+  border-radius: 50%;
+  width: 10px;
+  height: 200px;
+  animation: scanner 1.5s alternate-reverse 2 ease both;
+  background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+}
+
+.loading--scanner:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading--scanner:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading--scanner:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loading--scanner:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
 #main-wrap {
   max-width: 768px;
 }
@@ -170,15 +206,16 @@ img {
 
 .caps {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 24px;
   padding-left: 1rem;
   margin: 1.5rem 0 0.5rem 0;
 }
 
 .green-line {
   width: 3rem;
+  padding: 0 1.8rem;
   border-top: 4px solid #99E2D0;
-  margin: 0 0 1rem 1rem;
+  margin: 0 0 0 1rem;
 }
 
 .btn-round {
@@ -239,7 +276,7 @@ img {
 .menu-btn {
   width: 95%;
   border-radius: 20px;
-  margin: 1rem auto;
+  margin: 0 auto 1rem auto;
   background-color: #FFF;
   display: flex;
   flex-direction: row;
@@ -356,7 +393,7 @@ img {
   position: absolute;
   right: 1rem;
   border-radius: 3px;
-  animation: alternate fadeInOut 1.5s infinite ease;
+  animation: alternate fadeInOut 1s infinite ease;
 }
 .fig--new__hidden {
   display: none;
@@ -387,6 +424,25 @@ img {
     width: 7rem;
     height: 109px;
     transform: scale(1);
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes scanner {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes fadeInOut {
