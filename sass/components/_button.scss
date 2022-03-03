@@ -50,15 +50,22 @@
 }
 
 .menu-btn{
-    padding: 1.5em;
     width: 95%;
     border-radius: 20px;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     background-color: #FFF;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     border: none;
     @include shadow;
+    .text-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+        overflow: hidden;
+    }
     &--description{
         display: flex;
         flex-direction: row;
@@ -68,6 +75,11 @@
             @include ellipsisOverflow;
         }
     }
+    .bold{
+        @include bold;
+        margin-left: 15px;
+    }
+
     h2{
         margin: 0;
         @include ellipsisOverflow
@@ -77,5 +89,26 @@
         margin-bottom: 0;
         font-size: 20px;
     }
+    .check{
+        transform: scale(0);
+        background-color: $tertiary-color;
+        display: flex;
+        align-items: center;
+        border-radius: 0 20px 20px 0;
+        i{
+            color: $tertiary-color;
+            background-color: #FFF;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &:hover .check{
+        animation: greenSlideIn 1s 1 both;
+        transform-origin: 0 100%;
+        i{
+            animation: rotateCheck 1s 1 both;
+        }
+    }
+    
 }
 

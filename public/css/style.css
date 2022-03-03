@@ -181,15 +181,6 @@ img {
   margin: 0 0 1rem 1rem;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 .btn-round {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   box-shadow: 3px 3px 3px #c7c7c7ff;
@@ -246,19 +237,26 @@ article {
 }
 
 .menu-btn {
-  padding: 1.5em;
   width: 95%;
   border-radius: 20px;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   background-color: #FFF;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   border: none;
   box-shadow: 3px 3px 3px #ecececff;
 }
 .menu-btn:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
   cursor: pointer;
+}
+.menu-btn .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  overflow: hidden;
 }
 .menu-btn--description {
   display: flex;
@@ -271,6 +269,10 @@ article {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.menu-btn .bold {
+  font-weight: bold;
+  margin-left: 15px;
+}
 .menu-btn h2 {
   margin: 0;
   overflow: hidden;
@@ -281,6 +283,26 @@ article {
   margin-top: 0.5rem;
   margin-bottom: 0;
   font-size: 20px;
+}
+.menu-btn .check {
+  transform: scale(0);
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+.menu-btn .check i {
+  color: #99E2D0;
+  background-color: #FFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu-btn:hover .check {
+  animation: greenSlideIn 1s 1 both;
+  transform-origin: 0 100%;
+}
+.menu-btn:hover .check i {
+  animation: rotateCheck 1s 1 both;
 }
 
 .fig {
@@ -349,6 +371,46 @@ article {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+@keyframes greenSlideIn {
+  0% {
+    width: 0%;
+    height: 109px;
+    transform: scale(1);
+  }
+  100% {
+    width: 7rem;
+    height: 109px;
+    transform: scale(1);
+  }
+}
+@keyframes greenSlideOut {
+  100% {
+    width: 7rem;
+    height: 109px;
+    transform: scale(1);
+  }
+  0% {
+    width: 0%;
+    height: 109px;
+    transform: scale(1);
+  }
+}
+@keyframes rotateCheck {
+  0% {
+    font-size: 0px;
+    transform: rotate(0deg);
+    margin: 0;
+  }
+  50% {
+    font-size: 2.5rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin: 0 2rem;
+    transform: rotate(360deg);
+    font-size: 2.5rem;
   }
 }
 footer {

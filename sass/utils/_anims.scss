@@ -13,3 +13,46 @@
         -webkit-text-fill-color: transparent;
     } 
 }
+
+@keyframes greenSlideIn {
+    0%{
+        width: 0%;
+        height: 109px;
+        transform: scale(1);
+    }
+    100%{
+        width: 7rem;
+        height: 109px;
+        transform: scale(1);
+    }
+}
+
+@keyframes greenSlideOut{
+    100%{
+        width: 7rem;
+        height: 109px;
+        transform: scale(1);
+    }
+    0%{
+        width: 0%;
+        height: 109px;
+        transform: scale(1);
+    }
+} 
+
+@keyframes rotateCheck{
+    0%{
+        font-size: 0px;
+        transform: rotate(0deg);
+        margin: 0;
+    }
+    50%{
+        font-size: 2.5rem;
+        transform: rotate(0deg);
+    }
+    100%{
+        margin: 0 2rem;
+        transform: rotate(360deg);
+        font-size: 2.5rem;
+    }
+}

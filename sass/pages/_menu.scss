@@ -47,13 +47,3 @@ img{
     border-top: 4px solid $tertiary-color;
     margin: 0 0 1rem 1rem;
 }
-
-
-article{
-    display: flex;
-    flex-direction: column;
-}
-
-.bold{
-    @include bold;
-}
