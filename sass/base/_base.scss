@@ -7,9 +7,10 @@ body{
     font-family: roboto, sans-serif;
     font-size: 16px;
     margin: 0;
-    animation: homeAppearance 3s 3s forwards;
 }
-
+#main-wrap{
+    animation: homeAppearance 2s 3s forwards;
+}
 a{
     text-decoration: none;
     color: #000;
