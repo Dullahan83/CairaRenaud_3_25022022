@@ -201,19 +201,6 @@ img {
   cursor: pointer;
 }
 
-article .menu-parts {
-  animation: progressiveAppearance 0.8s forwards;
-}
-article .menu-parts:nth-child(2) {
-  animation-delay: 0.3s;
-}
-article .menu-parts:nth-child(3) {
-  animation-delay: 0.6s;
-}
-article .menu-parts:nth-child(4) {
-  animation-delay: 0.9s;
-}
-
 .caps {
   text-transform: uppercase;
   font-size: 24px;
@@ -292,6 +279,8 @@ article .menu-parts:nth-child(4) {
   flex-direction: row;
   align-items: center;
   box-shadow: 3px 3px 3px #ecececff;
+  animation: proggressiveAppearance 1.5s forwards;
+  opacity: 0;
 }
 .menu-btn:hover {
   box-shadow: 3px 3px 3px #c7c7c7ff;
@@ -349,6 +338,18 @@ article .menu-parts:nth-child(4) {
 }
 .menu-btn:hover .check i {
   animation: rotateCheck 1s 1 both;
+}
+
+.menu-btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.menu-btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.menu-btn:nth-child(4) {
+  animation-delay: 0.9s;
 }
 
 .fig {
