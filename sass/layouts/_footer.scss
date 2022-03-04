@@ -8,6 +8,14 @@ footer{
         font-weight: 500;
         font-size: 22px;
         margin: 0;
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            font-size: 34px;
+        }
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        #footer-text{
+            text-align: center;
+        }
     }
 }
 

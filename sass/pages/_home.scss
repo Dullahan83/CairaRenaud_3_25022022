@@ -99,10 +99,21 @@
         border-radius: 25px;
         margin: 20px auto;
         width: 90%;
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            width: 47%;
+            margin: 20px 3%;
+        }
+    }
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        .desktop-transition{
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
 #explanation{
+
     padding: 3rem 0;
     h2{
         font-size: 30px;
@@ -110,8 +121,18 @@
         padding-left: 2rem;
     }
     ol{
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 20px;
+            li{
+                width: 32%
+            }
+        }
         counter-reset: li;
         list-style: none;
+        padding: 0 10px 0 40px;
     }
 }
 

@@ -1,12 +1,8 @@
-main{
-    display: flex;
-    flex-direction: column;
-}
+
 img{
     height: 350px;
     width: 100%;
     object-fit: cover;
-
 }
 
 .menu{
@@ -33,6 +29,30 @@ img{
             @include gradientHeart;
         }
     }
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        .desktop-transition{
+            display: flex;
+            margin: 0 2%;
+            justify-content: space-between;
+            article{
+                width: 50%;
+            }
+        }
+        .desktop-center{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+        .dessert-parts{
+            display: flex;
+            margin: 0 1rem;
+            .menu-btn{
+                width: 32%;
+            }
+        }
+    }
 }
 
 .caps{
@@ -40,11 +60,17 @@ img{
     font-size: 24px;
     padding-left: 1rem;
     margin: 1.5rem 0 0.5rem 0;
-    
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        padding: 0;
+    }
 }
 .green-line{
     width: 3rem;
     padding: 0 1.8rem;
     border-top: 4px solid $tertiary-color;
     margin: 0 0 0 1rem;
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        width: 100%;
+        margin: 0;
+    }
 }

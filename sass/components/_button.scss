@@ -1,3 +1,4 @@
+/* Bouton gradient */
 .btn-round{
     &--center{
         display: flex;
@@ -16,6 +17,7 @@
        cursor: pointer;
     }
 }   
+
 
 .explanation-btn{
     @include shadow;
@@ -49,6 +51,8 @@
     }
 }
 
+
+/* Boutons menu restaurants */
 .menu-btn{
     width: 95%;
     border-radius: 20px;
@@ -83,12 +87,12 @@
 
     h2{
         margin: 0;
-        @include ellipsisOverflow
+        @include ellipsisOverflow;
+        font-size: 22px;
     }
     p{
         margin-top: 0.5rem;
         margin-bottom: 0;
-        font-size: 20px;
     }
     .check{
         transform: scale(0);
@@ -110,7 +114,6 @@
             animation: rotateCheck 1s 1 both;
         }
     }
-    
 }
 
 .menu-btn:nth-child(2){

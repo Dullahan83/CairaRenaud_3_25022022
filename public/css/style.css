@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: roboto, sans-serif;
   font-size: 16px;
@@ -147,6 +152,18 @@ h1 {
   margin: 20px auto;
   width: 90%;
 }
+@media screen and (min-width: 992px) {
+  #diners a {
+    width: 47%;
+    margin: 20px 3%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #diners .desktop-transition {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 #explanation {
   padding: 3rem 0;
@@ -159,11 +176,18 @@ h1 {
 #explanation ol {
   counter-reset: li;
   list-style: none;
+  padding: 0 10px 0 40px;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
+@media screen and (min-width: 992px) {
+  #explanation ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  #explanation ol li {
+    width: 32%;
+  }
 }
 
 img {
@@ -200,12 +224,41 @@ img {
   animation: heart 2000ms ease forwards;
   cursor: pointer;
 }
+@media screen and (min-width: 992px) {
+  .menu .desktop-transition {
+    display: flex;
+    margin: 0 2%;
+    justify-content: space-between;
+  }
+  .menu .desktop-transition article {
+    width: 50%;
+  }
+  .menu .desktop-center {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  .menu .dessert-parts {
+    display: flex;
+    margin: 0 1rem;
+  }
+  .menu .dessert-parts .menu-btn {
+    width: 32%;
+  }
+}
 
 .caps {
   text-transform: uppercase;
   font-size: 24px;
   padding-left: 1rem;
   margin: 1.5rem 0 0.5rem 0;
+}
+@media screen and (min-width: 992px) {
+  .caps {
+    padding: 0;
+  }
 }
 
 .green-line {
@@ -214,7 +267,14 @@ img {
   border-top: 4px solid #99E2D0;
   margin: 0 0 0 1rem;
 }
+@media screen and (min-width: 992px) {
+  .green-line {
+    width: 100%;
+    margin: 0;
+  }
+}
 
+/* Bouton gradient */
 .btn-round {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   box-shadow: 3px 3px 3px #c7c7c7ff;
@@ -270,6 +330,7 @@ img {
   color: #9356DC;
 }
 
+/* Boutons menu restaurants */
 .menu-btn {
   width: 95%;
   border-radius: 20px;
@@ -313,11 +374,11 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 22px;
 }
 .menu-btn p {
   margin-top: 0.5rem;
   margin-bottom: 0;
-  font-size: 20px;
 }
 .menu-btn .check {
   transform: scale(0);
@@ -431,12 +492,12 @@ img {
 @keyframes greenSlideIn {
   0% {
     width: 0%;
-    height: 109px;
+    height: 102px;
     transform: scale(1);
   }
   100% {
     width: 7rem;
-    height: 109px;
+    height: 102px;
     transform: scale(1);
   }
 }
@@ -515,6 +576,16 @@ footer h3 {
   font-weight: 500;
   font-size: 22px;
   margin: 0;
+}
+@media screen and (min-width: 992px) {
+  footer h3 {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer #footer-text {
+    text-align: center;
+  }
 }
 
 .footer-list {
