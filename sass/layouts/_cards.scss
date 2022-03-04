@@ -37,7 +37,7 @@
     &--new{
         display: flex;
         color: #088b6bff;
-        @include background-clr($tertiary-color);
+        background-color: $tertiary-color;
         padding: 0.5em 1em;
         position: absolute;
         right: 1rem;

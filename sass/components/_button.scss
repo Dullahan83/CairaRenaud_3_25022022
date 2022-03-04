@@ -59,7 +59,8 @@
     margin: 0 auto 1rem auto;
     background-color: #FFF;
     display: flex;
-    flex-direction: row;
+    overflow: hidden;
+    flex-direction: column;
     align-items: center;
     @include shadow;
     animation: proggressiveAppearance 1.5s forwards;
@@ -67,22 +68,24 @@
     .text-container{
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin: 1.5rem;
-        overflow: hidden;
     }
     &--description{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
-        justify-content: space-between;
-        &__text{
-            @include ellipsisOverflow;
-        }
+        padding-left: 1rem;
+        @include ellipsisOverflow
+        
     }
     .bold{
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
         @include bold;
-        margin-left: 15px;
+        margin: 0 0.5rem;
+        transition: 0.5s ease;           /* Pour que le prix soit décalé lors de l'animation du slide */
     }
 
     h2{
@@ -93,26 +96,34 @@
     p{
         margin-top: 0.5rem;
         margin-bottom: 0;
+        @include ellipsisOverflow
     }
+    i{
+        font-size: 34px;
+    }
+
     .check{
-        transform: scale(0);
-        background-color: $tertiary-color;
+        position: absolute;
+        background: $tertiary-color;
+        right: 0px;
+        width: 7rem;
+        height: 7rem;
+        color: #FFF;
         display: flex;
+        justify-content: center;
         align-items: center;
-        border-radius: 0 20px 20px 0;
-        i{
-            color: $tertiary-color;
-            background-color: #FFF;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        transform: translateX(100%);
+        transition: 0.5s ease;               /* Pour l'animation du slide */
     }
     &:hover .check{
-        animation: greenSlideIn 1s 1 both;
-        transform-origin: 0 100%;
+        transform: translateX(0%);
+        transition: 0.5s ease;
         i{
-            animation: rotateCheck 1s 1 both;
+            animation: rotateCheck 0.7s 1 both
         }
+    }
+    &:hover .bold{
+        padding-right: 7rem;
     }
 }
 

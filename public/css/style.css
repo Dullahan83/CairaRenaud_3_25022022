@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -87,7 +88,7 @@ h1 {
 }
 
 .background {
-  background: #eaeaeaff;
+  background-color: #eaeaeaff;
 }
 
 .form {
@@ -116,7 +117,7 @@ h1 {
 }
 
 .explore {
-  background: #f6f6f6ff;
+  background-color: #f6f6f6ff;
   padding: 4rem 0;
 }
 .explore--description {
@@ -138,7 +139,7 @@ h1 {
 }
 
 #diners {
-  background: #f6f6f6ff;
+  background-color: #f6f6f6ff;
   padding: 3rem 0;
 }
 #diners h2 {
@@ -146,7 +147,7 @@ h1 {
   font-size: 30px;
 }
 #diners a {
-  background: #fff;
+  background-color: #fff;
   display: flex;
   border-radius: 25px;
   margin: 20px auto;
@@ -337,7 +338,8 @@ img {
   margin: 0 auto 1rem auto;
   background-color: #FFF;
   display: flex;
-  flex-direction: row;
+  overflow: hidden;
+  flex-direction: column;
   align-items: center;
   box-shadow: 3px 3px 3px #ecececff;
   animation: proggressiveAppearance 1.5s forwards;
@@ -350,24 +352,26 @@ img {
 .menu-btn .text-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 1.5rem;
-  overflow: hidden;
 }
 .menu-btn--description {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  justify-content: space-between;
-}
-.menu-btn--description__text {
+  padding-left: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menu-btn .bold {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   font-weight: bold;
-  margin-left: 15px;
+  margin: 0 0.5rem;
+  transition: 0.5s ease;
+  /* Pour que le prix soit décalé lors de l'animation du slide */
 }
 .menu-btn h2 {
   margin: 0;
@@ -379,26 +383,36 @@ img {
 .menu-btn p {
   margin-top: 0.5rem;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-btn i {
+  font-size: 34px;
 }
 .menu-btn .check {
-  transform: scale(0);
-  background-color: #99E2D0;
+  position: absolute;
+  background: #99E2D0;
+  right: 0px;
+  width: 7rem;
+  height: 7rem;
+  color: #FFF;
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 0 20px 20px 0;
-}
-.menu-btn .check i {
-  color: #99E2D0;
-  background-color: #FFF;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  /* Pour l'animation du slide */
 }
 .menu-btn:hover .check {
-  animation: greenSlideIn 1s 1 both;
-  transform-origin: 0 100%;
+  transform: translateX(0%);
+  transition: 0.5s ease;
 }
 .menu-btn:hover .check i {
-  animation: rotateCheck 1s 1 both;
+  animation: rotateCheck 0.7s 1 both;
+}
+.menu-btn:hover .bold {
+  padding-right: 7rem;
 }
 
 .menu-btn:nth-child(2) {
@@ -461,7 +475,7 @@ img {
 .fig--new {
   display: flex;
   color: #088b6bff;
-  background: #99E2D0;
+  background-color: #99E2D0;
   padding: 0.5em 1em;
   position: absolute;
   right: 1rem;
@@ -503,18 +517,15 @@ img {
 }
 @keyframes rotateCheck {
   0% {
-    font-size: 0px;
     transform: rotate(0deg);
     margin: 0;
   }
-  50% {
-    font-size: 2.5rem;
+  20% {
     transform: rotate(0deg);
   }
   100% {
     margin: 0 2rem;
     transform: rotate(360deg);
-    font-size: 2.5rem;
   }
 }
 /* Loader animations */

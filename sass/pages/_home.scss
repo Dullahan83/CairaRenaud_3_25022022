@@ -36,7 +36,7 @@
 
 
 .background{
-    @include background-clr(#eaeaeaff);
+    background-color: #eaeaeaff;
     
 }
 .form{
@@ -65,12 +65,12 @@
 }
 
 .explore{
-    @include background-clr(#f6f6f6ff);
+    background-color: #f6f6f6ff;
     padding: 4rem 0;
     &--description{
         text-align: center;
         p{
-            @include width(70%);
+            width: 70%;
         }
         &__bold{
             font-size: 30px;
@@ -87,14 +87,14 @@
 }
 
 #diners{
-    @include background-clr(#f6f6f6ff);
+    background-color: #f6f6f6ff;
     padding: 3rem 0;;
     h2{
         padding-left: 2rem;
         font-size: 30px
     }
     a{
-        @include background-clr(#fff);
+        background-color: #fff;
         display: flex;
         border-radius: 25px;
         margin: 20px auto;

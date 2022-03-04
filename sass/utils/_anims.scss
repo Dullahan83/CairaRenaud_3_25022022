@@ -31,18 +31,15 @@
 
 @keyframes rotateCheck{
     0%{
-        font-size: 0px;
         transform: rotate(0deg);
         margin: 0;
     }
-    50%{
-        font-size: 2.5rem;
+    20%{
         transform: rotate(0deg);
     }
     100%{
         margin: 0 2rem;
         transform: rotate(360deg);
-        font-size: 2.5rem;
     }
 }
 

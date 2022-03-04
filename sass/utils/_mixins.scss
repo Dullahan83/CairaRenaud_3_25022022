@@ -1,23 +1,9 @@
-@mixin background-clr($color){
-    background: $color;
-}
-
 @mixin shadow{
     box-shadow: 3px 3px 3px #ecececff;
     &:hover{
         box-shadow: 3px 3px 3px #c7c7c7ff;
         cursor: pointer;
     }
-}
-
-@mixin scannerGradient1{
-    background-color: linear-gradient(45deg, $primary-color, $secondary-color);
-}
-@mixin scannerGradient2{
-    background-color: linear-gradient(45deg, $secondary-color, $tertiary-color);
-}
-@mixin scannerGradient3{
-    background-color: linear-gradient(45deg, $tertiary-color, $primary-color);
 }
 
 @mixin ellipsisOverflow{
@@ -35,10 +21,6 @@
 
 @mixin gradient($direction,$color-start,$color-stop){
     background: linear-gradient($direction,$color-start, $color-stop);
-}
-
-@mixin width ($width){
-    width: $width;
 }
 
 @mixin display($display,$direction){
