@@ -62,7 +62,7 @@
     overflow: hidden;
     flex-direction: column;
     align-items: center;
-    @include shadow;
+    box-shadow: 3px 3px 3px #c7c7c7ff;
     animation: proggressiveAppearance 1.5s forwards;
     opacity: 0;
     .text-container{
@@ -114,6 +114,9 @@
         align-items: center;
         transform: translateX(100%);
         transition: 0.5s ease;               /* Pour l'animation du slide */
+    }
+    &:hover{
+        box-shadow: 3px 3px 3px #979797;
     }
     &:hover .check{
         transform: translateX(0%);

@@ -341,13 +341,9 @@ img {
   overflow: hidden;
   flex-direction: column;
   align-items: center;
-  box-shadow: 3px 3px 3px #ecececff;
+  box-shadow: 3px 3px 3px #c7c7c7ff;
   animation: proggressiveAppearance 1.5s forwards;
   opacity: 0;
-}
-.menu-btn:hover {
-  box-shadow: 3px 3px 3px #c7c7c7ff;
-  cursor: pointer;
 }
 .menu-btn .text-container {
   width: 100%;
@@ -403,6 +399,9 @@ img {
   transform: translateX(100%);
   transition: 0.5s ease;
   /* Pour l'animation du slide */
+}
+.menu-btn:hover {
+  box-shadow: 3px 3px 3px #979797;
 }
 .menu-btn:hover .check {
   transform: translateX(0%);
