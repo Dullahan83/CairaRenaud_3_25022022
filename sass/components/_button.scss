@@ -84,7 +84,7 @@
         justify-content: center;
         align-items:flex-end;
         @include bold;
-        margin: 0 0.5rem;
+        margin: 0 1.5rem 0 0.3rem;
         transition: 0.5s ease;           /* Pour que le prix soit décalé lors de l'animation du slide */
     }
 
@@ -99,14 +99,14 @@
         @include ellipsisOverflow
     }
     i{
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .check{
         position: absolute;
         background: $tertiary-color;
         right: 0px;
-        width: 7rem;
+        width: 5rem;
         height: 7rem;
         color: #FFF;
         display: flex;
@@ -123,7 +123,7 @@
         }
     }
     &:hover .bold{
-        padding-right: 7rem;
+        padding-right: 5rem;
     }
 }
 
