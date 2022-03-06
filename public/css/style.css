@@ -51,6 +51,7 @@ h1 {
   visibility: hidden;
 }
 
+/* Loader */
 .loading {
   width: 100%;
   height: 100%;
@@ -87,27 +88,30 @@ h1 {
   animation-delay: 0.8s;
 }
 
+/* Form & explore*/
 .background {
   background-color: #eaeaeaff;
 }
 
 .form {
   display: flex;
-  justify-content: center;
   padding: 1.5rem 1rem;
-  opacity: 0.7;
+  justify-content: center;
   box-shadow: inset 0px 8px 8px -3px #c6c6c6;
 }
 .form--label {
   font-size: 20px;
-  padding-left: 6rem;
+  cursor: pointer;
+  padding-left: 1rem;
 }
 .form--searchline {
   border-color: transparent;
   background: #eaeaeaff;
-  padding-left: 1rem;
+  padding-left: 0.8rem;
   font-size: 20px;
   font-weight: 600;
+  width: 13rem;
+  opacity: 0.8;
 }
 .form--searchline:focus {
   outline: none;
@@ -138,6 +142,33 @@ h1 {
   opacity: 0.8;
 }
 
+/* Functionnement */
+#explanation {
+  padding: 3rem 0;
+}
+#explanation h2 {
+  font-size: 30px;
+  margin-top: 0;
+  padding-left: 2rem;
+}
+#explanation ol {
+  counter-reset: li;
+  list-style: none;
+  padding: 0 10px 0 40px;
+}
+@media screen and (min-width: 992px) {
+  #explanation ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  #explanation ol li {
+    width: 32%;
+  }
+}
+
+/* Diners cards emplacement */
 #diners {
   background-color: #f6f6f6ff;
   padding: 3rem 0;
@@ -163,31 +194,6 @@ h1 {
   #diners .desktop-transition {
     display: flex;
     justify-content: space-between;
-  }
-}
-
-#explanation {
-  padding: 3rem 0;
-}
-#explanation h2 {
-  font-size: 30px;
-  margin-top: 0;
-  padding-left: 2rem;
-}
-#explanation ol {
-  counter-reset: li;
-  list-style: none;
-  padding: 0 10px 0 40px;
-}
-@media screen and (min-width: 992px) {
-  #explanation ol {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 20px;
-  }
-  #explanation ol li {
-    width: 32%;
   }
 }
 
