@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Dullahan83/CairaRenaud_3_25022022/issues"
   },
-  "homepage": "https://github.com/Dullahan83/CairaRenaud_3_25022022#readme"
+  "homepage": "https://github.com/Dullahan83/CairaRenaud_3_25022022#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
