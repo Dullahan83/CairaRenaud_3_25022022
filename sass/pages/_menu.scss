@@ -26,6 +26,13 @@ img{
             font-size: 35px;
             font-weight: 100;
             color: #000000;
+        }
+        &__backgroundHeart{
+            display: flex;
+            font-size: 35px;
+            font-weight: 100;
+            position: absolute;
+            right: 1.5rem;
             @include gradientHeart;
         }
     }

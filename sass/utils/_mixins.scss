@@ -14,7 +14,7 @@
 
 @mixin gradientHeart{
     &:hover{
-        animation: heart 2000ms ease forwards;
+        animation: heart 1500ms ease forwards;
         cursor: pointer;
     }
 }

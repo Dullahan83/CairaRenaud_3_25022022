@@ -228,8 +228,15 @@ img {
   font-weight: 100;
   color: #000000;
 }
-.menu--title__heart:hover {
-  animation: heart 2000ms ease forwards;
+.menu--title__backgroundHeart {
+  display: flex;
+  font-size: 35px;
+  font-weight: 100;
+  position: absolute;
+  right: 1.5rem;
+}
+.menu--title__backgroundHeart:hover {
+  animation: heart 1500ms ease forwards;
   cursor: pointer;
 }
 @media screen and (min-width: 992px) {
@@ -474,8 +481,15 @@ img {
   font-size: 32px;
   font-weight: 100;
 }
-.fig--caption__heart:hover {
-  animation: heart 2000ms ease forwards;
+.fig--caption__backgroundHeart {
+  display: flex;
+  font-size: 32px;
+  font-weight: 100;
+  position: absolute;
+  right: 1rem;
+}
+.fig--caption__backgroundHeart:hover {
+  animation: heart 1500ms ease forwards;
   cursor: pointer;
 }
 .fig--new {
